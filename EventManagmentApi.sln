@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31019.35
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagmentApi", "EventManagmentApi\EventManagmentApi.csproj", "{BAF17A16-02D9-4737-9345-98DD6CC6CA7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventManagmentApi", "EventManagmentApi\EventManagmentApi.csproj", "{BAF17A16-02D9-4737-9345-98DD6CC6CA7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagment.Tests", "EventManagment.Tests\EventManagment.Tests.csproj", "{B270D933-5A36-4799-A770-292D12F39AC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BAF17A16-02D9-4737-9345-98DD6CC6CA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAF17A16-02D9-4737-9345-98DD6CC6CA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAF17A16-02D9-4737-9345-98DD6CC6CA7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B270D933-5A36-4799-A770-292D12F39AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B270D933-5A36-4799-A770-292D12F39AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B270D933-5A36-4799-A770-292D12F39AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B270D933-5A36-4799-A770-292D12F39AC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
