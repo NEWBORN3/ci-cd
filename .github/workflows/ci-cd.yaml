@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  DOTNET_VERSION: "5.0.x"
+  DOTNET_VERSION: "6.0.x"
   AZURE_WEBAPP_NAME: haymanot-demo-app
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Setup .Net 5
+      - name: Setup .Net 6
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
