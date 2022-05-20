@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace EventManagmentApi.Services
 {
-    public record Event(int Id, DateTime Date, string Location, string Description);
     public class EventRepository : IEventRepository
     {
         private List<Event> Events { get; } = new();

@@ -12,16 +12,17 @@ namespace EventManagmentApi.Controllers
     [ApiController]
     public class EventsController : ControllerBase
     {
-        private readonly IEventRepository repository;
+        //private readonly IEventRepository repository;
+        private readonly EventContext repository;
 
-        public EventsController(IEventRepository repository)
+        public EventsController(EventContext repository)
         {
             this.repository = repository;
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Event>))]
-        public IActionResult GetAll() => Ok(repository.GetAll());
+        public async Task<IActionResult> GetAll() => Ok(await repository.GetAll());
 
         [HttpGet("{id}", Name = nameof(GetById))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -39,14 +40,16 @@ namespace EventManagmentApi.Controllers
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Event))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public IActionResult Add([FromBody] Event newEvent)
+        public async Task<IActionResult> Add([FromBody] Event newEvent)
         {
+            /*
             if (newEvent.Id < 1)
             {
                 return BadRequest("Invalid id");
             }
-            repository.Add(newEvent);
-            return CreatedAtAction(nameof(GetById), new { id =newEvent.Id }, newEvent);
+            */
+            await repository.Add(newEvent);
+            return CreatedAtAction(nameof(GetById), new { id = newEvent.Id }, newEvent);
         }
 
         [HttpDelete]
